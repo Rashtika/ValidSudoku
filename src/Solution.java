@@ -32,10 +32,8 @@ public class Solution {
                 Set<String> numbers = new HashSet<>();
                 for (int i = s - 3; i < s; i++) {
                     for (int j = t - 3; j < t; j++) {
-                        if (!String.valueOf(board[i][j]).equals(".")) {
-                            if (!numbers.add(String.valueOf(board[i][j]))) {
+                        if (!(String.valueOf(board[i][j]).equals(".")) && !numbers.add(String.valueOf(board[i][j]))) {
                                 return false;
-                            }
                         }
                     }
                 }
